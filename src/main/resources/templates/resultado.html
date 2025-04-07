@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="imagex/png" href="./assets/fatec_ra_metropolitana_sp_capital_zona_sul_br.ico">
+
+  <title>Resultado do IMC</title>
+</head>
+
+<body>
+  <div class="container-titulo">
+    <h1>Resultado</h1>
+  </div>
+  <div class="resultados">
+    <p><strong>Nome:</strong> <span th:text="${pessoa.nome}"></span></p>
+    <p><strong>Peso:</strong> <span th:text="${pessoa.peso}"></span> kg</p>
+    <p><strong>Altura:</strong> <span th:text="${pessoa.altura}"></span> cm</p>
+    <p><strong>Classificação:</strong> <span th:text="${pessoa.classificacao}"></span></p>
+    <p><strong>Mensagem:</strong> <span th:text="${pessoa.mensagem}"></span></p>
+    <a th:href="${pessoa.apoio}" target="_blank"><strong>Link de apoio</strong></a>
+  </div>
+  <form action="/" method="get">
+    <button class="button_calcular-novamente" type="submit">Calcular novamente</button>
+  </form>
+</body>
+
+<style>
+  body {
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    background-color: #cccccc;
+  }
+
+  input {
+    text-align: center;
+    font-size: 14px;
+    border-radius: 15px;
+  }
+
+  .button_calcular-novamente {
+    margin-top: 20px;
+
+    border-radius: 20px;
+    padding: 10px;
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    background-color: #00DCD9;
+    border: 0.5px solid #000;
+  }
+</style>
+
+</html>

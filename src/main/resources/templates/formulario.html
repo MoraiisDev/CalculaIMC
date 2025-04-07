@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/fatec_ra_metropolitana_sp_capital_zona_sul_br.ico">
+
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+    <div class="container-titulo">
+        <h1>Calculadora de IMC</h1>
+        <p>Preencha os campos abaixo para calcular seu IMC.</p>
+    </div>
+    <form action="/calcular" method="post">
+        Nome: <input type="text" name="nome" required><br>
+        Peso (kg): <input type="number" name="peso" oninput="limitarCaracteres(this, 3)" step="1" required><br>
+        Altura (cm): <input type="number" name="altura" oninput="limitarCaracteres(this, 3)" step="1" required><br>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+
+<style>
+    input {
+        text-align: center;
+        font-size: 14px;
+        border-radius: 15px;
+        border: 1px solid #000;
+    }
+
+    body {
+        background-color: #cccccc;
+
+        font-family: "Nunito", sans-serif;
+        text-align: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                margin-top: 20px;
+
+                border-radius: 20px;
+                padding: 10px;
+
+                text-transform: uppercase;
+
+                background-color: #228B22;
+                border: 0.5px solid #000;
+            }
+        }
+    }
+</style>
+
+<script>
+    // Input number não aceita maxlength, então limitei o valor através desta função
+    function limitarCaracteres(input, maxLength) {
+        if (input.value.length > maxLength) {
+            input.value = input.value.slice(0, maxLength);
+        }
+    }
+</script>
+
+</html>
