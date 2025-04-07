@@ -43,7 +43,7 @@ Cada classificação possui um link de apoio com informações adicionais.
    ```cd CalculaIMC```
 
 4. Execute o projeto:
-   ```./mvnw spring-boot:run ou rode CalculaImcApplication.java via IDE```
+   ```./mvnw spring-boot:run``` ou rode ```CalculaImcApplication.java via IDE```
 
 5. Acesse no navegador:
    ```http://localhost:5000```
