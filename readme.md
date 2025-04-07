@@ -37,13 +37,13 @@ Cada classificação possui um link de apoio com informações adicionais.
 ## ▶️ Como executar
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/CalculaIMC.git
+   ```git clone (https://github.com/MoraiisDev/CalculaIMC.git)```
+   
+3. Acesse o diretório:
+   ```cd CalculaIMC```
 
-2. Acesse o diretório:
-   cd CalculaIMC
+4. Execute o projeto:
+   ```./mvnw spring-boot:run ou rode CalculaImcApplication.java via IDE```
 
-3. Execute o projeto:
-   ./mvnw spring-boot:run ou rode CalculaImcApplication.java via IDE
-
-4. Acesse no navegador:
-   http://localhost:5000
+5. Acesse no navegador:
+   ```http://localhost:5000```
